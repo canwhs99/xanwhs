@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barışma Mesajları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #fff0f5;
+        }
+        #mesaj {
+            font-size: 24px;
+            margin-bottom: 30px;
+            min-height: 60px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div id="mesaj">Beni affetmeni istiyorum...</div>
+    <button id="btn">Seni özledim ❤️</button>
+
+    <script>
+        const mesajlar = [
+            "Beni affetmeni istiyorum...",
+            "Kavga etmek istemezdim, üzgünüm.",
+            "Hatalarım için gerçekten üzgünüm.",
+            "Seninle barışmak istiyorum.",
+            "Kalbim senden özür diliyor.",
+            "Yanımda olmanı çok isterim.",
+            "Sana tekrar güven vermek istiyorum.",
+            "Birlikte her şeyi düzeltebiliriz.",
+            "Sana değer veriyorum ve seni seviyorum.",
+            "Lütfen beni affet ❤️"
+        ];
+
+        let index = 0;
+
+        document.getElementById("btn").addEventListener("click", () => {
+            index++;
+            if(index < mesajlar.length) {
+                document.getElementById("mesaj").innerText = mesajlar[index];
+            } else {
+                document.getElementById("mesaj").innerText = "Seni çok seviyorum ❤️";
+                document.getElementById("btn").style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
